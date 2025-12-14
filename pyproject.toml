@@ -4,22 +4,27 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "xaitoolkit"
-version = "0.1.0"
-description = "Explain PyTorch image models with lightweight XAI methods (saliency, SmoothGrad, IG, RISE, LIME-stratified, axis-aligned SHAP-like)."
+version = "0.1.1"
+description = "A lightweight toolkit to explain PyTorch vision models with gradient and perturbation-based XAI."
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "MIT"}
-authors = [{name="Muhammad Rashid"}]
+license = { text = "MIT" }
+authors = [
+  { name = "Muhammad Rashid" }
+]
 dependencies = [
   "torch",
   "torchvision",
-  "timm",
   "numpy",
   "pillow",
   "matplotlib",
-  "scikit-learn",
+  "timm",
   "scikit-image",
+  "scikit-learn"
 ]
+
+[project.urls]
+Homepage = "https://github.com/rashidrao-pk/xaitoolkit"
 
 [project.scripts]
 xai-explain = "xaitoolkit.cli:main"
